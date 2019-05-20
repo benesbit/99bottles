@@ -29,7 +29,10 @@ class Bottles
   end
 
   def number_string(number = nil)
-    number
+    if number == 0
+    else
+      number
+    end
   end
 
   def container(number = nil)
