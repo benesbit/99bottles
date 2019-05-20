@@ -19,7 +19,7 @@ class Bottles
       "#{number_string(number)} #{container(number)} of beer on the wall, " +
       "#{number_string(number)} #{container(number)} of beer.\n" +
       "Take it down and pass it around, " +
-      "no more bottles of beer on the wall.\n"
+      "no more #{container(number-1)} of beer on the wall.\n"
     else
       "#{number_string(number)} bottles of beer on the wall, " +
       "#{number_string(number)} bottles of beer.\n" +
