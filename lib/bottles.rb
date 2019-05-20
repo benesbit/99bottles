@@ -29,6 +29,7 @@ class Bottles
   end
 
   def preposition
+    "it"
   end
 
   def number_string(number = nil)
