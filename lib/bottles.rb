@@ -41,9 +41,9 @@ class Bottles
 
   def container(number = nil)
     if number == 1
-    'bottle'
+      "bottle"
     else
-      'bottles'
+      "bottles"
     end
   end
 
