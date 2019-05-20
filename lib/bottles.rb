@@ -18,7 +18,7 @@ class Bottles
     when 1
       "#{number_string(number)} #{container(number)} of beer on the wall, " +
       "#{number_string(number)} #{container(number)} of beer.\n" +
-      "Take it down and pass it around, " +
+      "Take #{preposition} down and pass it around, " +
       "#{number_string(number-1)} #{container(number-1)} of beer on the wall.\n"
     else
       "#{number_string(number)} #{container(number)} of beer on the wall, " +
