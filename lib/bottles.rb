@@ -15,11 +15,6 @@ class Bottles
       "no more bottles of beer.\n" +
       "Go to the store and buy some more, " +
       "99 bottles of beer on the wall.\n"
-    when 1
-      "#{number_string(number)} #{container(number)} of beer on the wall, " +
-      "#{number_string(number)} #{container(number)} of beer.\n" +
-      "Take #{preposition(number)} down and pass it around, " +
-      "#{number_string(number-1)} #{container(number-1)} of beer on the wall.\n"
     else
       "#{number_string(number)} #{container(number)} of beer on the wall, " +
       "#{number_string(number)} #{container(number)} of beer.\n" +
