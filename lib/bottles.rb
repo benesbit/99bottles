@@ -30,6 +30,7 @@ class Bottles
 
   def number_string(number = nil)
     if number == 0
+      'no more'
     else
       number
     end
