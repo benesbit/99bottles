@@ -28,6 +28,10 @@ class Bottles
     end
   end
 
+  def number_string(number)
+    number
+  end
+
   def container(number = nil)
     if number == 1
     'bottle'
