@@ -19,7 +19,7 @@ class Bottles
       "#{number_string(number)} #{container(number)} of beer on the wall, " +
       "#{number_string(number)} #{container(number)} of beer.\n" +
       "Take it down and pass it around, " +
-      "no more #{container(number-1)} of beer on the wall.\n"
+      "#{number_string(number-1)} #{container(number-1)} of beer on the wall.\n"
     else
       "#{number_string(number)} #{container(number)} of beer on the wall, " +
       "#{number_string(number)} #{container(number)} of beer.\n" +
@@ -30,7 +30,7 @@ class Bottles
 
   def number_string(number = nil)
     if number == 0
-      'no more'
+      "no more"
     else
       number
     end
