@@ -28,6 +28,9 @@ class Bottles
     end
   end
 
+  def preposition
+  end
+
   def number_string(number = nil)
     if number == 0
       "no more"
