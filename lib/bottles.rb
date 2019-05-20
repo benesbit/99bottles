@@ -28,7 +28,7 @@ class Bottles
     end
   end
 
-  def preposition
+  def preposition(number = nil)
     "it"
   end
 
