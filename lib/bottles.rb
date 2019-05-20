@@ -28,7 +28,7 @@ class Bottles
     end
   end
 
-  def number_string(number)
+  def number_string(number = nil)
     number
   end
 
