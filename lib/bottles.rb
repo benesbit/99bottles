@@ -23,7 +23,7 @@ class Bottles
     else
       "#{number_string(number)} #{container(number)} of beer on the wall, " +
       "#{number_string(number)} #{container(number)} of beer.\n" +
-      "Take #{preposition(number)} down and pass it around, " +
+      "Take one down and pass it around, " +
       "#{number_string(number-1)} #{container(number-1)} of beer on the wall.\n"
     end
   end
@@ -31,6 +31,8 @@ class Bottles
   def preposition(number = nil)
     if number == 1
       "it"
+    else
+      "one"
     end
   end
 
