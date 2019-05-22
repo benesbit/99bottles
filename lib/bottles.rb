@@ -9,18 +9,10 @@ class Bottles
 
   def verse(number)
     bottle_number = BottleNumber.new
-    "#{bottle_number.quantity(number).capitalize} #{container(number)} of beer on the wall, " +
-    "#{bottle_number.quantity(number)} #{container(number)} of beer.\n" +
+    "#{bottle_number.quantity(number).capitalize} #{bottle_number.container(number)} of beer on the wall, " +
+    "#{bottle_number.quantity(number)} #{bottle_number.container(number)} of beer.\n" +
     "#{action(number)}, " +
-    "#{bottle_number.quantity(successor(number))} #{container(successor(number))} of beer on the wall.\n"
-  end
-
-  def container(number)
-    if number == 1
-      "bottle"
-    else
-      "bottles"
-    end
+    "#{bottle_number.quantity(successor(number))} #{bottle_number.container(successor(number))} of beer on the wall.\n"
   end
 
   def action(number)
@@ -55,6 +47,14 @@ class BottleNumber
       "no more"
     else
       number.to_s
+    end
+  end
+
+  def container(number)
+    if number == 1
+      "bottle"
+    else
+      "bottles"
     end
   end
 end
