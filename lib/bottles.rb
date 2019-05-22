@@ -15,14 +15,6 @@ class Bottles
     "#{bottle_number.quantity(successor(number))} #{container(successor(number))} of beer on the wall.\n"
   end
 
-  def quantity(number)
-    if number == 0
-      "no more"
-    else
-      number.to_s
-    end
-  end
-
   def container(number)
     if number == 1
       "bottle"
