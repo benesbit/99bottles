@@ -11,24 +11,8 @@ class Bottles
     bottle_number = BottleNumber.new
     "#{bottle_number.quantity(number).capitalize} #{bottle_number.container(number)} of beer on the wall, " +
     "#{bottle_number.quantity(number)} #{bottle_number.container(number)} of beer.\n" +
-    "#{action(number)}, " +
+    "#{bottle_number.action(number)}, " +
     "#{bottle_number.quantity(successor(number))} #{bottle_number.container(successor(number))} of beer on the wall.\n"
-  end
-
-  def action(number)
-    if number == 0
-      "Go to the store and buy some more"
-    else
-      "Take #{pronoun(number)} down and pass it around"
-    end
-  end
-
-  def pronoun(number)
-    if number == 1
-      "it"
-    else
-      "one"
-    end
   end
 
   def successor(number)
@@ -63,6 +47,14 @@ class BottleNumber
       "Go to the store and buy some more"
     else
       "Take #{pronoun(number)} down and pass it around"
+    end
+  end
+
+  def pronoun(number)
+    if number == 1
+      "it"
+    else
+      "one"
     end
   end
 end
