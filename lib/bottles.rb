@@ -12,17 +12,9 @@ class Bottles
     "#{bottle_number.quantity(number).capitalize} #{bottle_number.container(number)} of beer on the wall, " +
     "#{bottle_number.quantity(number)} #{bottle_number.container(number)} of beer.\n" +
     "#{bottle_number.action(number)}, " +
-    "#{bottle_number.quantity(successor(number))} #{bottle_number.container(successor(number))} of beer on the wall.\n"
+    "#{bottle_number.quantity(bottle_number.successor(number))} #{bottle_number.container(bottle_number.successor(number))} of beer on the wall.\n"
   end
-
-  def successor(number)
-    if number == 0
-      99
-    else
-      number - 1
-    end
-  end
-
+  
 end
 
 class BottleNumber
@@ -55,6 +47,14 @@ class BottleNumber
       "it"
     else
       "one"
+    end
+  end
+
+  def successor(number)
+    if number == 0
+      99
+    else
+      number - 1
     end
   end
 end
