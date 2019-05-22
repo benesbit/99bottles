@@ -1,29 +1,44 @@
 class Bottles
-
   def song
     verses(99, 0)
   end
 
   def verses(starting, ending)
-    starting.downto(ending).map {|i| verse(i)}.join("\n")
+    starting.downto(ending).collect {|i| verse(i)}.join("\n")
   end
 
   def verse(number)
-    case number
-    when 0
-      "No more bottles of beer on the wall, " +
-      "no more bottles of beer.\n" +
-      "Go to the store and buy some more, " +
-      "99 bottles of beer on the wall.\n"
+    "#{quantity(number).capitalize} #{container(number)} of beer on the wall, " +
+    "#{quantity(number)} #{container(number)} of beer.\n" +
+    "#{action(number)}, " +
+    "#{quantity(successor(number))} #{container(successor(number))} of beer on the wall.\n"
+  end
+
+  def quantity(number)
+    if number == 0
+      "no more"
     else
-      "#{number_string(number)} #{container(number)} of beer on the wall, " +
-      "#{number_string(number)} #{container(number)} of beer.\n" +
-      "Take #{preposition(number)} down and pass it around, " +
-      "#{number_string(number-1)} #{container(number-1)} of beer on the wall.\n"
+      number.to_s
     end
   end
 
-  def preposition(number = nil)
+  def container(number)
+    if number == 1
+      "bottle"
+    else
+      "bottles"
+    end
+  end
+
+  def action(number)
+    if number == 0
+      "Go to the store and buy some more"
+    else
+      "Take #{pronoun(number)} down and pass it around"
+    end
+  end
+
+  def pronoun(number)
     if number == 1
       "it"
     else
@@ -31,19 +46,11 @@ class Bottles
     end
   end
 
-  def number_string(number = nil)
+  def successor(number)
     if number == 0
-      "no more"
+      99
     else
-      number
-    end
-  end
-
-  def container(number = nil)
-    if number == 1
-      "bottle"
-    else
-      "bottles"
+      number - 1
     end
   end
 
