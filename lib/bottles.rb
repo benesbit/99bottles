@@ -57,5 +57,11 @@ class Bottles
 end
 
 class BottleNumber
-  
+  def quantity(number)
+    if number == 0
+      "no more"
+    else
+      number.to_s
+    end
+  end
 end
